@@ -46,25 +46,11 @@ function Apply() {
     if (errors[k]) setErrors(er => ({ ...er, [k]: undefined }));
   };
 
-  const validate = () => {
-    const e = {};
-    if (form.name.trim().length < 2) e.name = 'Please enter your full name.';
-    if (form.business.trim().length < 2) e.business = 'Business name is required.';
-    const em = isValidBusinessEmail(form.email);
-    if (!em.ok) e.email = em.reason;
-    if (!isValidPhone(form.phone)) e.phone = 'Enter a valid phone number (10+ digits).';
-    if (!isValidUrl(form.website)) e.website = 'Enter a valid website URL (e.g. yourcompany.com).';
-    return e;
-  };
-
   const onSubmit = (ev) => {
     ev.preventDefault();
-    const e = validate();
-    setErrors(e);
-    if (Object.keys(e).length === 0) {
-      setSubmitting(true);
-      setTimeout(() => { window.location.href = 'thank-you.html'; }, 400);
-    }
+    setErrors({});
+    setSubmitting(true);
+    setTimeout(() => { window.location.href = 'thank-you.html'; }, 200);
   };
 
   const Nav = () => (
@@ -122,7 +108,7 @@ function Apply() {
 
           <form className="apply-card" onSubmit={onSubmit} noValidate>
             <h2>Tell us about you</h2>
-            <p className="sub">All fields are required except where noted.</p>
+            <p className="sub">Tell us as much as you'd like — we'll follow up to fill in any gaps.</p>
 
             <div className="field">
               <Input label="Your name" placeholder="Jane Doe"
