@@ -77,6 +77,7 @@ function Portal() {
     contracts: 'Contracts',
     sold: 'Sold Clients',
     users: 'Users',
+    'add-user': 'Add Users',
     training: 'Training & Support',
     profile: 'Profile',
   };
@@ -628,7 +629,7 @@ function Portal() {
             <p>Invite and manage the team at {AFFILIATE.company.name}. Each user gets their own portal login and their own commission attribution.</p>
           </div>
           <div className="page-head-actions">
-            <Button variant="primary" iconLeft={Ic.plus({ size: 16 })}>Add Users</Button>
+            <Button variant="primary" iconLeft={Ic.plus({ size: 16 })} onClick={() => setPage('add-user')}>Add Users</Button>
           </div>
         </div>
 
@@ -691,6 +692,39 @@ function Portal() {
       </>
     );
   };
+
+  /* ---- Add User ---- */
+  const AddUser = () => (
+    <>
+      <div className="page-head">
+        <div>
+          <h1>Add Users</h1>
+          <p>Add a teammate at {AFFILIATE.company.name}. They'll get a portal login and their own commission attribution.</p>
+        </div>
+      </div>
+
+      <div className="form-section">
+        <h3>User details</h3>
+        <p className="sub">We'll email an invite to set their password.</p>
+        <div className="form-grid">
+          <Input label="First name" placeholder="Jane" />
+          <Input label="Last name" placeholder="Carter" />
+          <Input wrapStyle={{ gridColumn: '1 / -1' }} label="Email" type="email" placeholder="jane@yourcompany.com" icon={Ic.mail({ size: 16 })} />
+        </div>
+        <div style={{ marginTop: 18 }}>
+          <label style={{ display: 'flex', alignItems: 'flex-start', gap: 10, fontSize: 14, color: 'var(--ink-700)' }}>
+            <input type="checkbox" defaultChecked style={{ marginTop: 3 }} />
+            <span>Change user password on login</span>
+          </label>
+        </div>
+      </div>
+
+      <div className="form-actions">
+        <Button variant="ghost" onClick={() => setPage('users')}>Cancel</Button>
+        <Button variant="primary" iconRight={Ic.send({ size: 16 })} onClick={() => setPage('users')}>Add Users</Button>
+      </div>
+    </>
+  );
 
   /* ---- Training & Support ---- */
   const Training = () => (
@@ -829,6 +863,7 @@ function Portal() {
   else if (page === 'contracts') body = <Contracts />;
   else if (page === 'sold') body = <SoldClients />;
   else if (page === 'users') body = <Users />;
+  else if (page === 'add-user') body = <AddUser />;
   else if (page === 'training') body = <Training />;
   else if (page === 'profile') body = <Profile />;
 
@@ -853,7 +888,7 @@ function Portal() {
         </div>
         <div className="sb-section" style={{ marginTop: 14 }}>
           <div className="sb-label">Account</div>
-          {navItem('users', Ic.users, 'Users', USERS.length)}
+          {navItem('users', Ic.users, 'Users', USERS.length, ['add-user'])}
           {navItem('profile', Ic.user, 'Profile')}
         </div>
         <div className="sb-foot">
