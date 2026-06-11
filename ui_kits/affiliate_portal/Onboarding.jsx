@@ -42,7 +42,6 @@ function Onboarding() {
           <span>Debt Resolve Pro Affiliate Portal</span>
         </a>
         <div className="ob-header-right">
-          <a className="ob-help" href="#">{Ic.help({ size: 16 })} Need help? Contact your account manager</a>
           <div className="ob-user">
             <Avatar initials={USER.initials} size={34} />
             <div className="ob-user-meta">
