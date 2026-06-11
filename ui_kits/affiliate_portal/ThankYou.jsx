@@ -8,7 +8,7 @@ function ThankYou() {
   return (
     <div className="thanks-wrap">
       <div className="thanks-nav">
-        <a href="homepage.html"><img src="../../assets/logo-drp-white.png" alt="Debt Resolve Pro" /></a>
+        <a href="homepage.html"><img src="../../assets/logo-drp.png" alt="Debt Resolve Pro" /></a>
       </div>
 
       <div className="thanks-main">
@@ -57,7 +57,7 @@ function ThankYou() {
       </div>
 
       <div className="thanks-foot">
-        Questions? Email <a style={{ color: 'rgba(255,255,255,0.85)' }} href="mailto:partners@debtrespro.com">partners@debtrespro.com</a> · © 2026 Debt Resolve Pro
+        Questions? Email <a style={{ color: 'var(--blue-600)' }} href="mailto:partners@debtrespro.com">partners@debtrespro.com</a> · © 2026 Debt Resolve Pro
       </div>
     </div>
   );

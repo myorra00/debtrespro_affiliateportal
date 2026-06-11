@@ -843,7 +843,7 @@ function Portal() {
     <div className="app">
       <aside className="sidebar">
         <div className="sb-brand">
-          <img className="sb-logo" src="../../assets/logo-drp-white.png" alt="Debt Resolve Pro" />
+          <img className="sb-logo" src="../../assets/logo-drp.png" alt="Debt Resolve Pro" />
           <span className="sb-pill">Affiliate Portal</span>
         </div>
         <div className="sb-section">
@@ -868,7 +868,7 @@ function Portal() {
               <div className="sb-user-name">{AFFILIATE.agent.name}</div>
               <div className="sb-user-sub">{AFFILIATE.company.name}</div>
             </div>
-            <a href="signin.html" title="Sign out" style={{ color: 'rgba(255,255,255,0.5)', display: 'flex' }}>{Ic.logOut({ size: 16 })}</a>
+            <a href="signin.html" title="Sign out" style={{ color: 'var(--ink-500)', display: 'flex' }}>{Ic.logOut({ size: 16 })}</a>
           </div>
         </div>
       </aside>
