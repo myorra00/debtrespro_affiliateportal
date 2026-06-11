@@ -5,6 +5,13 @@
    ============================================================ */
 
 /* ===========================================================
+   0. Global reset
+   =========================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: hidden; }
+img { max-width: 100%; height: auto; }
+
+/* ===========================================================
    1. Marketing shell (used on homepage, become-affiliate, signin shell)
    =========================================================== */
 .site { font-family: var(--font-sans); color: var(--ink-600); }
@@ -671,6 +678,22 @@
   .ob-footer > div > button { flex: 1; }
   .ob-footer > div:last-child { flex-direction: column-reverse; }
   .ob-doc-body { max-height: 180px; }
+
+  /* ---- Forms (Create Contract, Add User, etc) ---- */
+  .form-section { padding: 18px 16px; margin-bottom: 14px; }
+  .form-grid { gap: 14px; }
+  .form-grid textarea { width: 100%; max-width: 100%; }
+  .form-actions { flex-direction: column-reverse; gap: 10px; }
+  .form-actions button { width: 100%; }
+
+  /* ---- Portal cards / pipeline-hero ---- */
+  .pipeline-hero { padding: 22px 18px; }
+  .resource-tile { padding: 18px; }
+  .cols-3 { grid-template-columns: 1fr; gap: 14px; }
+  .cols-2 { grid-template-columns: 1fr; gap: 14px; }
+  .profile-grid { grid-template-columns: 1fr; gap: 16px; }
+  .biz .name { font-size: 13px; }
+  .biz .sub { font-size: 11px; }
 
   /* ---- Generic ---- */
   .row { flex-direction: column; align-items: stretch; }
