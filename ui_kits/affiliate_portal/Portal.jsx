@@ -907,7 +907,7 @@ function Portal() {
 
       <main className="main">
         <div className="topbar">
-          <button className="menu-btn" onClick={() => setNavOpen(o => !o)} aria-label="Toggle navigation">{navOpen ? Ic.x({ size: 22 }) : Ic.menu({ size: 22 })}</button>
+          <button className="menu-btn" onClick={() => setNavOpen(o => !o)} aria-label="Toggle navigation">{navOpen ? Ic.close({ size: 22 }) : Ic.menu({ size: 22 })}</button>
           <div className="topbar-title">Debt Resolve Pro Affiliate Portal</div>
           <div className="topbar-right">
             <button className="icon-btn">{Ic.bell({ size: 19 })}<span className="dot"></span></button>
