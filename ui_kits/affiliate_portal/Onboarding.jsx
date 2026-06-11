@@ -57,7 +57,6 @@ function Onboarding() {
     <div className="ob-progress">
       <div className="ob-progress-meta">
         <strong>{completedCount} of {total} complete</strong>
-        <span>~{minutesLeft} min left</span>
       </div>
       <ol className="ob-steps">
         {STEPS.map((s, i) => {
