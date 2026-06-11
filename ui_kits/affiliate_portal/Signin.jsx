@@ -8,7 +8,7 @@ function Signin() {
   return (
     <div className="signin-wrap">
       <div className="signin-art">
-        <img className="signin-art-logo" src="../../assets/logo-drp-white.png" alt="Debt Resolve Pro" />
+        <a href="homepage.html"><img className="signin-art-logo" src="../../assets/logo-drp-white.png" alt="Debt Resolve Pro" /></a>
         <div className="signin-art-body">
           <span className="eyebrow">Affiliate Portal</span>
           <h2>Refer leads. Track contracts. Get paid.</h2>

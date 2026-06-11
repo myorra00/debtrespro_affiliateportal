@@ -8,7 +8,7 @@ function Homepage() {
   const Nav = () => (
     <header className="nav">
       <div className="container nav-inner">
-        <img className="nav-logo" src="../../assets/logo-drp.png" alt="Debt Resolve Pro" />
+        <a href="homepage.html"><img className="nav-logo" src="../../assets/logo-drp.png" alt="Debt Resolve Pro" /></a>
         <nav className="nav-links">
           <a className="nav-link active" href="homepage.html">Home</a>
           <a className="nav-link" href="#">About Us</a>
@@ -147,7 +147,7 @@ function Homepage() {
         <div className="container">
           <div className="footer-grid">
             <div>
-              <img className="footer-logo" src="../../assets/logo-drp-white.png" alt="Debt Resolve Pro" />
+              <a href="homepage.html"><img className="footer-logo" src="../../assets/logo-drp-white.png" alt="Debt Resolve Pro" /></a>
               <p>Debt Resolve Pro specializes in business debt negotiation. We've restructured millions in debt and help owners regain control and protect cash flow.</p>
             </div>
             <div className="footer-col">

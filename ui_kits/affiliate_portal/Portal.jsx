@@ -874,7 +874,7 @@ function Portal() {
     <div className="app">
       <aside className="sidebar">
         <div className="sb-brand">
-          <img className="sb-logo" src="../../assets/logo-drp.png" alt="Debt Resolve Pro" />
+          <a href="homepage.html"><img className="sb-logo" src="../../assets/logo-drp.png" alt="Debt Resolve Pro" /></a>
         </div>
         <div className="sb-section">
           <div className="sb-label">Workspace</div>

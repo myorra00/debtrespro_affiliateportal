@@ -127,7 +127,7 @@ function BecomeAffiliate() {
         <div className="container">
           <div className="footer-grid">
             <div>
-              <img className="footer-logo" src="../../assets/logo-drp-white.png" alt="Debt Resolve Pro" />
+              <a href="homepage.html"><img className="footer-logo" src="../../assets/logo-drp-white.png" alt="Debt Resolve Pro" /></a>
               <p>Debt Resolve Pro specializes in business debt negotiation. We've restructured millions in debt and help owners regain control and protect cash flow.</p>
             </div>
             <div className="footer-col">
