@@ -120,15 +120,10 @@ function BecomeAffiliate() {
         <div className="container">
           <div className="aff-final-cta">
             <h2>Ready to Close Your First Deal?</h2>
-            <p>Apply once. Onboarded in 48 hours. Then bring your leads, close deals digitally, and watch weekly commissions hit your account — all from one portal.</p>
+            <p>Apply once. Onboarded in 48 hours. Then bring your leads, close deals digitally, and watch weekly commissions hit your account.</p>
             <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
               <Button variant="green" size="lg" iconRight={Ic.arrowRight({ size: 18 })} onClick={() => window.location.href = 'apply.html'}>Apply to Join</Button>
-              <Button variant="outline" size="lg" style={{ background: 'transparent', color: '#fff', borderColor: 'rgba(255,255,255,0.5)' }} iconLeft={Ic.phone({ size: 17 })}>Talk to a Partner Lead</Button>
             </div>
-            <a className="portal-link" href="signin.html">
-              {Ic.externalLink({ size: 16 })}
-              Already an affiliate? Sign in at <code>affiliates.debtrespro.com</code>
-            </a>
           </div>
         </div>
       </section>
