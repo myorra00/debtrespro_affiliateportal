@@ -844,7 +844,6 @@ function Portal() {
       <aside className="sidebar">
         <div className="sb-brand">
           <img className="sb-logo" src="../../assets/logo-drp.png" alt="Debt Resolve Pro" />
-          <span className="sb-pill">Affiliate Portal</span>
         </div>
         <div className="sb-section">
           <div className="sb-label">Workspace</div>
@@ -875,7 +874,7 @@ function Portal() {
 
       <main className="main">
         <div className="topbar">
-          <div className="topbar-title">{page === 'dashboard' ? '' : TITLES[page]}</div>
+          <div className="topbar-title">Debt Resolve Pro Affiliate Portal</div>
           <div className="topbar-right">
             <button className="icon-btn">{Ic.bell({ size: 19 })}<span className="dot"></span></button>
           </div>
