@@ -11,7 +11,7 @@ function Signin() {
         <a href="homepage.html"><img className="signin-art-logo" src="../../assets/logo-drp-white.png" alt="Debt Resolve Pro" /></a>
         <div className="signin-art-body">
           <span className="eyebrow">Affiliate Portal</span>
-          <h2>Refer leads. Track contracts. Get paid.</h2>
+          <h2>Close Deals, Get Paid.</h2>
           <p>One secure portal for everything you do as a DebtResolvePro partner — from submission to settlement.</p>
           <ul className="signin-feats">
             <li>{Ic.check({ size: 18 })}<span>Real-time pipeline visibility on every referral</span></li>
