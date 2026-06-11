@@ -116,13 +116,9 @@ function BecomeAffiliate() {
       </section>
 
       {/* APPLY / SIGN IN CTA */}
-      <section className="section" id="apply" style={{ paddingTop: 64 }}>
+      <section id="apply" style={{ padding: '0 0 64px', textAlign: 'center' }}>
         <div className="container">
-          <div className="aff-final-cta">
-            <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Button variant="green" size="lg" iconRight={Ic.arrowRight({ size: 18 })} onClick={() => window.location.href = 'apply.html'}>Apply to Join</Button>
-            </div>
-          </div>
+          <Button variant="green" size="lg" iconRight={Ic.arrowRight({ size: 18 })} onClick={() => window.location.href = 'apply.html'}>Apply to Join</Button>
         </div>
       </section>
 
