@@ -44,7 +44,7 @@ function BecomeAffiliate() {
             <span className="eyebrow">DebtResolvePro Affiliate Program</span>
             <h1>Close Your MCA Deals.<br/>Get Paid <span className="green">Weekly</span>.</h1>
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 28, fontWeight: 700, lineHeight: 1.2, margin: '0 0 18px', color: '#fff' }}>
-              Leverage the Power of DebtResPro
+              Leverage the Power of DebtResolvePro
             </h2>
             <p className="lede">
               Plug into the ultimate monetization engine for your customers seeking high-quality debt restructuring services. With our streamlined digital contracting application, you can secure MCA debt-relief deals in minutes — eliminating the friction of traditional paperwork.
@@ -53,7 +53,7 @@ function BecomeAffiliate() {
               Once the contract is signed, our elite debt-servicing team takes complete ownership of the file, managing everything from rigorous negotiation to final settlement and recovery.
             </p>
             <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 20, fontWeight: 700, margin: '8px 0 14px', color: '#fff' }}>
-              Why Partner with DebtResPro?
+              Why Partner with DebtResolvePro?
             </h3>
             <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 28px', display: 'flex', flexDirection: 'column', gap: 12, maxWidth: 720 }}>
               <li style={{ fontSize: 17, lineHeight: 1.55, color: 'rgba(255,255,255,0.88)', paddingLeft: 18, position: 'relative' }}>

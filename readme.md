@@ -15,7 +15,7 @@ Built from the live brand:
 - **Homepage screenshot** (supplied) — source of the exact palette, type feel, and layout.
 - Company: Debt Resolve Pro, 220 Congress Park Dr, Delray Beach, FL 33445 · 866-757-3339.
 
-> A predecessor MCA-portal prototype ("ClearBizDebt") previously lived in this project and has been fully removed; this system is DebtResPro-only.
+> A predecessor MCA-portal prototype ("ClearBizDebt") previously lived in this project and has been fully removed; this system is DebtResolvePro-only.
 
 ---
 
