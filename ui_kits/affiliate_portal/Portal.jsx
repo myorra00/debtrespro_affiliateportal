@@ -851,7 +851,6 @@ function Portal() {
           {navItem('dashboard', Ic.grid, 'Dashboard')}
           {navItem('leads', Ic.list, 'Leads', activeLeads)}
           {navItem('contracts', Ic.fileSigned, 'Contracts', pendingContracts, ['submit'])}
-          {navItem('users', Ic.users, 'Users', USERS.length)}
         </div>
         <div className="sb-section" style={{ marginTop: 14 }}>
           <div className="sb-label">Resources</div>
@@ -859,6 +858,7 @@ function Portal() {
         </div>
         <div className="sb-section" style={{ marginTop: 14 }}>
           <div className="sb-label">Account</div>
+          {navItem('users', Ic.users, 'Users', USERS.length)}
           {navItem('profile', Ic.user, 'Profile')}
         </div>
         <div className="sb-foot">
