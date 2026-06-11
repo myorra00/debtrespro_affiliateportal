@@ -1,0 +1,54 @@
+/* ============================================================
+   Debt Resolve Pro — Typography Tokens
+   Poppins (geometric display) + Mulish (humanist body/UI).
+   Headings are confident and rounded; body is clean and calm.
+   ============================================================ */
+
+:root {
+  /* ---- Families ---- */
+  --font-display: 'Poppins', 'Mulish', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-sans:    'Mulish', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono:    ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* ---- Weights ---- */
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+  --weight-extra:    800;   /* Poppins extrabold for big hero headings */
+
+  /* ---- Type scale (px) ---- */
+  --text-hero:    56px;  /* marketing hero */
+  --text-display: 40px;  /* big section headings */
+  --text-h1:      32px;  /* page titles */
+  --text-h2:      26px;  /* section / card headings */
+  --text-h3:      20px;  /* sub-headings */
+  --text-lg:      18px;  /* lead paragraph */
+  --text-base:    16px;  /* body default */
+  --text-sm:      14px;  /* UI default, table cells */
+  --text-xs:      13px;  /* captions, field labels */
+  --text-2xs:     12px;  /* meta, badges */
+  --text-3xs:     11px;  /* eyebrow / overline */
+
+  /* ---- Line heights ---- */
+  --leading-tight:   1.1;   /* hero */
+  --leading-snug:    1.2;   /* headings */
+  --leading-normal:  1.5;   /* body */
+  --leading-relaxed: 1.65;  /* long paragraphs */
+
+  /* ---- Letter spacing ---- */
+  --tracking-hero:    -0.02em;
+  --tracking-heading: -0.015em;
+  --tracking-tight:   -0.01em;
+  --tracking-snug:    -0.005em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.04em;   /* uppercase labels */
+  --tracking-wider:   0.12em;   /* eyebrow / overline */
+
+  /* ---- Roles ---- */
+  --font-eyebrow-size:   var(--text-3xs);
+  --font-eyebrow-weight: var(--weight-bold);
+  --font-eyebrow-track:  var(--tracking-wider);
+
+  --font-numeric: "tnum" 1, "lnum" 1;
+}

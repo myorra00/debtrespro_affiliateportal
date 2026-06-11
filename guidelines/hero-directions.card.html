@@ -1,0 +1,113 @@
+<!-- @dsCard group="Directions" viewport="1280x1480" name="Hero — 2 Directions" subtitle="Choose a homepage hero treatment: Light vs Navy" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--ink-100); font-family: var(--font-sans); }
+  .wrap { display: flex; flex-direction: column; gap: 28px; padding: 28px; }
+  .opt { background: #fff; border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-card); }
+  .opt-label { display: flex; align-items: center; gap: 12px; padding: 16px 24px; border-bottom: 1px solid var(--border-subtle); }
+  .tag { font-family: var(--font-display); font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: #fff; background: var(--blue-600); padding: 4px 12px; border-radius: 999px; }
+  .tag.b { background: var(--navy-800); }
+  .opt-label .name { font-family: var(--font-display); font-weight: 700; font-size: 16px; color: var(--ink-900); }
+  .opt-label .desc { font-size: 14px; color: var(--ink-500); margin-left: auto; }
+
+  /* shared hero bits */
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; }
+  .nav img { height: 34px; }
+  .navlinks { display: flex; gap: 26px; font-size: 14px; font-weight: 600; }
+  .pill-btn { font-family: var(--font-display); font-weight: 600; font-size: 14px; border-radius: var(--radius-md); padding: 11px 18px;
+    display: inline-flex; align-items: center; gap: 8px; }
+  .hero { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; padding: 56px 48px 64px; }
+  .hero h1 { font-family: var(--font-display); font-weight: 800; font-size: 60px; line-height: 1.03; letter-spacing: -0.02em; margin: 0; }
+  .hero p.sub { font-family: var(--font-display); font-weight: 500; font-size: 22px; margin: 20px 0 0; }
+  .ctas { display: flex; gap: 14px; margin-top: 30px; }
+  .arrow { width: 17px; height: 17px; }
+  .media { height: 380px; border-radius: var(--radius-2xl); overflow: hidden; display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 16px; }
+
+  /* Direction A — Light */
+  .A { background: var(--gradient-hero); }
+  .A .navlinks { color: var(--ink-700); }
+  .A .nav .pill-btn { background: var(--blue-600); color: #fff; box-shadow: var(--shadow-btn-sm); }
+  .A h1 { color: var(--ink-900); }
+  .A h1 .accent { color: var(--blue-500); }
+  .A p.sub { color: var(--ink-700); }
+  .A .cta-primary { background: var(--blue-600); color: #fff; box-shadow: var(--shadow-btn-sm); }
+  .A .cta-secondary { background: #fff; color: var(--blue-600); border: 1.5px solid var(--blue-500); }
+  .A .media { background: linear-gradient(135deg, var(--tint-blue), var(--blue-50)); border: 2px dashed var(--blue-100); color: var(--blue-500); box-shadow: var(--shadow-lg); }
+  .pill-btn.lg { padding: 14px 24px; font-size: 16px; }
+
+  /* Direction B — Navy immersive */
+  .B { background: var(--navy-900); position: relative; overflow: hidden; }
+  .B .glow { position: absolute; width: 620px; height: 620px; border-radius: 50%; background: radial-gradient(circle, rgba(59,130,246,0.3), transparent 62%); top: -240px; right: -140px; }
+  .B .glow2 { position: absolute; width: 520px; height: 520px; border-radius: 50%; background: radial-gradient(circle, rgba(98,178,47,0.22), transparent 62%); bottom: -260px; left: -160px; }
+  .B .nav, .B .hero { position: relative; z-index: 1; }
+  .B .nav img { filter: none; }
+  .B .navlinks { color: rgba(255,255,255,0.8); }
+  .B .nav .pill-btn { background: var(--green-500); color: #fff; }
+  .B h1 { color: #fff; }
+  .B h1 .accent { color: var(--green-500); }
+  .B p.sub { color: rgba(255,255,255,0.82); }
+  .B .cta-primary { background: var(--green-500); color: #fff; }
+  .B .cta-secondary { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.5); }
+  .B .media { background: linear-gradient(135deg, rgba(255,255,255,0.10), rgba(255,255,255,0.03)); border: 1px solid rgba(255,255,255,0.18); color: rgba(255,255,255,0.65); backdrop-filter: blur(2px); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- Direction A -->
+    <div class="opt">
+      <div class="opt-label"><span class="tag">A</span><span class="name">Light &mdash; faithful to debtrespro.com</span><span class="desc">Pale gradient, dark headline, blue accent, photo right</span></div>
+      <div class="A">
+        <div class="nav">
+          <img src="../assets/logo-drp.png" alt="Debt Resolve Pro" />
+          <div class="navlinks"><span>Home</span><span>About</span><span>Services</span><span>Resources</span><span>Testimonials</span></div>
+          <span class="pill-btn">Free Assessment</span>
+        </div>
+        <div class="hero">
+          <div>
+            <h1>Secure Your<br>Business's <span class="accent">Future</span></h1>
+            <p class="sub">Reduce Your MCA Debt and Improve Your Cash Flow</p>
+            <div class="ctas">
+              <span class="pill-btn lg cta-primary">Free Assessment <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+              <span class="pill-btn lg cta-secondary">Call Us 866-757-3339</span>
+            </div>
+          </div>
+          <div class="media">Warm office photo</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Direction B -->
+    <div class="opt">
+      <div class="opt-label"><span class="tag b">B</span><span class="name">Navy &mdash; immersive &amp; premium</span><span class="desc">Full navy gradient, white headline, green accent + CTA</span></div>
+      <div class="B">
+        <div class="glow"></div><div class="glow2"></div>
+        <div class="nav">
+          <img src="../assets/logo-drp-white.png" alt="Debt Resolve Pro" />
+          <div class="navlinks"><span>Home</span><span>About</span><span>Services</span><span>Resources</span><span>Testimonials</span></div>
+          <span class="pill-btn">Free Assessment</span>
+        </div>
+        <div class="hero">
+          <div>
+            <h1>Secure Your<br>Business's <span class="accent">Future</span></h1>
+            <p class="sub">Reduce Your MCA Debt and Improve Your Cash Flow</p>
+            <div class="ctas">
+              <span class="pill-btn lg cta-primary">Free Assessment <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+              <span class="pill-btn lg cta-secondary">Call Us 866-757-3339</span>
+            </div>
+          </div>
+          <div class="media">Warm office photo</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

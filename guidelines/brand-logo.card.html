@@ -1,0 +1,23 @@
+<!-- @dsCard group="Brand" viewport="700x200" name="Logo Lockup" subtitle="Color on light, white on navy" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--surface-card); padding: 24px; }
+  .row { display: flex; gap: 20px; }
+  .tile { flex: 1; border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center;
+          padding: 36px 24px; min-height: 130px; }
+  .light { background: var(--white); border: 1px solid var(--border-default); }
+  .dark { background: var(--navy-900); }
+  img { width: 240px; max-width: 80%; height: auto; display: block; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="tile light"><img src="../assets/logo-drp.png" alt="Debt Resolve Pro"></div>
+    <div class="tile dark"><img src="../assets/logo-drp-white.png" alt="Debt Resolve Pro"></div>
+  </div>
+</body>
+</html>

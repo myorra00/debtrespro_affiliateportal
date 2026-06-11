@@ -1,0 +1,40 @@
+/* ============================================================
+   Debt Resolve Pro — Effects: radii, shadows, motion, gradients
+   ============================================================ */
+
+:root {
+  /* ---- Corner radii ---- */
+  --radius-xs:   4px;
+  --radius-sm:   6px;
+  --radius-md:   8px;    /* buttons, inputs */
+  --radius-lg:   12px;   /* cards */
+  --radius-xl:   16px;   /* panels, feature cards */
+  --radius-2xl:  24px;   /* hero media, large surfaces */
+  --radius-pill: 999px;  /* chips, badges, avatars */
+
+  /* ---- Shadows (soft, cool blue-tinted) ---- */
+  --shadow-xs:    0 1px 2px rgba(19, 31, 69, 0.06);
+  --shadow-sm:    0 2px 6px rgba(19, 31, 69, 0.06);
+  --shadow-card:  0 4px 16px rgba(19, 31, 69, 0.07);
+  --shadow-lg:    0 12px 32px rgba(19, 31, 69, 0.10);
+  --shadow-xl:    0 24px 60px rgba(19, 31, 69, 0.14);
+  --shadow-btn:   0 6px 16px rgba(37, 99, 235, 0.28);   /* blue CTA glow */
+  --shadow-btn-sm:0 2px 8px rgba(37, 99, 235, 0.20);
+
+  /* ---- Focus ---- */
+  --focus-shadow: 0 0 0 4px var(--focus-ring);
+
+  /* ---- Motion ---- */
+  --ease-out:      cubic-bezier(0.16, 1, 0.3, 1);   /* @kind other */
+  --ease-in-out:   cubic-bezier(0.65, 0, 0.35, 1);  /* @kind other */
+  --duration-fast: 0.15s;   /* @kind other */
+  --duration-base: 0.22s;   /* @kind other */
+  --duration-slow: 0.4s;    /* @kind other */
+  --lift: translateY(-2px); /* @kind other */
+
+  /* ---- Brand gradients & atmosphere ---- */
+  --gradient-arc: linear-gradient(90deg, var(--green-500) 0%, var(--blue-600) 100%); /* @kind other */
+  --gradient-blue: linear-gradient(135deg, var(--blue-600) 0%, var(--navy-800) 100%); /* @kind other */
+  --gradient-hero: linear-gradient(180deg, var(--tint-blue) 0%, var(--white) 100%);   /* @kind other */
+  --glow-blue: radial-gradient(circle at center, rgba(37, 99, 235, 0.12) 0%, transparent 65%); /* @kind other */
+}

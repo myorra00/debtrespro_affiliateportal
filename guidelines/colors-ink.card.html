@@ -1,0 +1,28 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Ink — Neutral Ramp" subtitle="Cool blue-tinted grays" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--surface-card); padding: 22px; }
+  .ramp { display: flex; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-default); }
+  .step { flex: 1; height: 88px; display: flex; flex-direction: column; justify-content: flex-end; padding: 8px; }
+  .n { font-size: 10px; font-weight: 700; font-family: var(--font-display); }
+  .h { font-size: 9px; font-family: var(--font-mono); opacity: 0.75; margin-top: 1px; }
+</style>
+</head>
+<body>
+  <div class="ramp">
+    <div class="step" style="background: var(--ink-900); color:#fff;"><div class="n">900</div><div class="h">14171F</div></div>
+    <div class="step" style="background: var(--ink-700); color:#fff;"><div class="n">700</div><div class="h">353B49</div></div>
+    <div class="step" style="background: var(--ink-600); color:#fff;"><div class="n">600</div><div class="h">565E70</div></div>
+    <div class="step" style="background: var(--ink-500); color:#fff;"><div class="n">500</div><div class="h">717A8C</div></div>
+    <div class="step" style="background: var(--ink-400); color:#fff;"><div class="n">400</div><div class="h">9AA2B1</div></div>
+    <div class="step" style="background: var(--ink-300); color: var(--ink-900);"><div class="n">300</div><div class="h">C7CDD8</div></div>
+    <div class="step" style="background: var(--ink-200); color: var(--ink-700);"><div class="n">200</div><div class="h">E3E7EE</div></div>
+    <div class="step" style="background: var(--ink-100); color: var(--ink-700);"><div class="n">100</div><div class="h">EEF1F6</div></div>
+    <div class="step" style="background: var(--ink-50); color: var(--ink-700);"><div class="n">50</div><div class="h">F6F8FB</div></div>
+  </div>
+</body>
+</html>

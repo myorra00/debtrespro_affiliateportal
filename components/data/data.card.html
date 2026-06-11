@@ -1,0 +1,34 @@
+<!-- @dsCard group="Components" viewport="700x180" name="Data — Card" subtitle="White content surface with header" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; background: var(--surface-page); padding: 22px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+  const { Card, Badge } = window.ClearBizDebtDesignSystem_f45b76;
+  function Demo() {
+    return (
+      <Card title="Your case" subtitle="Ridgeline Logistics LLC"
+        action={<Badge tone="info" dot>In Negotiation</Badge>}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', fontFamily: 'var(--font-sans)', fontSize: 14, color: 'var(--ink-600)' }}>
+          <div><div style={{ color: 'var(--ink-400)', fontSize: 12, marginBottom: 4 }}>MCA balance</div><strong className="tnum" style={{ color: 'var(--ink-900)', fontSize: 18 }}>$187,500</strong></div>
+          <div><div style={{ color: 'var(--ink-400)', fontSize: 12, marginBottom: 4 }}>Negotiated</div><strong className="tnum" style={{ color: 'var(--green-600)', fontSize: 18 }}>$96,200</strong></div>
+          <div><div style={{ color: 'var(--ink-400)', fontSize: 12, marginBottom: 4 }}>You save</div><strong className="tnum" style={{ color: 'var(--blue-600)', fontSize: 18 }}>49%</strong></div>
+        </div>
+      </Card>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+</body>
+</html>

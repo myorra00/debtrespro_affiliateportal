@@ -1,0 +1,9 @@
+/* ============================================================
+   Debt Resolve Pro — Webfonts
+   Poppins (display) + Mulish (body/UI), both from Google Fonts.
+   The live site appears to use a geometric sans for headings; we
+   pair Poppins with Mulish for UI/body legibility. Replace with
+   local @font-face if you have the exact brand fonts.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Mulish:wght@400;500;600;700;800&display=swap');

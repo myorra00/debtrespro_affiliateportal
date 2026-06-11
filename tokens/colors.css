@@ -1,0 +1,87 @@
+/* ============================================================
+   Debt Resolve Pro — Color Tokens
+   Royal blue + deep navy + leafy green, on clean neutrals.
+   Pulled from the debtrespro.com brand (logo + homepage).
+   Base values first, then semantic aliases.
+   ============================================================ */
+
+:root {
+  /* ---- Brand Blue (primary action, links, accent) ---- */
+  --blue-700: #1E4FC7;   /* pressed / hover-dark */
+  --blue-600: #2563EB;   /* PRIMARY — CTAs, active states */
+  --blue-500: #3B82F6;   /* lighter accent — "Future" word, links, highlights */
+  --blue-100: #DCE7FF;   /* border on tinted surfaces */
+  --blue-50:  #EEF4FF;   /* pale tint background */
+
+  /* ---- Brand Navy (wordmark, deep surfaces, headings) ---- */
+  --navy-900: #131F45;   /* darkest — footers, sidebar */
+  --navy-800: #1B2A63;   /* dark surface */
+  --navy-700: #243A86;   /* the "DebtResolve" wordmark navy */
+
+  /* ---- Brand Green (logo "Pro", tagline, success) ---- */
+  --green-700: #3F8A1E;  /* readable green text on light */
+  --green-600: #4F9A24;
+  --green-500: #62B22F;  /* BRAND green */
+  --green-100: #DCEFCB;  /* border on green tint */
+  --green-50:  #EFF7E8;  /* pale green tint */
+
+  /* ---- Ink: neutral ramp (cool, blue-tinted gray) ---- */
+  --ink-900: #14171F;   /* primary headings */
+  --ink-800: #1F2430;
+  --ink-700: #353B49;   /* body strong */
+  --ink-600: #565E70;   /* body */
+  --ink-500: #717A8C;   /* secondary text */
+  --ink-400: #9AA2B1;   /* placeholder / muted */
+  --ink-300: #C7CDD8;   /* control borders */
+  --ink-200: #E3E7EE;   /* default borders */
+  --ink-100: #EEF1F6;   /* dividers / subtle fills */
+  --ink-50:  #F6F8FB;   /* sunken / input rest */
+  --white:   #FFFFFF;
+
+  /* ---- Surface tints ---- */
+  --tint-blue:  #EEF4FB;   /* pale blue-gray hero / section panel */
+  --tint-blue2: #F1F5FC;
+
+  /* ---- Status (portal) ---- */
+  --status-info:      #2563EB;  --status-info-bg:    #EEF4FF;
+  --status-success:   #4F9A24;  --status-success-bg: #EFF7E8;
+  --status-warning:   #B45309;  --status-warning-bg: #FEF3C7;
+  --status-danger:    #C8362C;  --status-danger-bg:  #FDECEA;
+  --status-neutral:   #717A8C;  --status-neutral-bg: #EEF1F6;
+
+  /* ============================================================
+     Semantic aliases — prefer these in component CSS
+     ============================================================ */
+
+  /* Text */
+  --text-strong:    var(--ink-900);
+  --text-body:      var(--ink-600);
+  --text-secondary: var(--ink-500);
+  --text-muted:     var(--ink-400);
+  --text-on-dark:   var(--white);
+  --text-on-brand:  var(--white);     /* white on blue */
+  --text-link:      var(--blue-600);
+  --text-brand:     var(--navy-700);  /* navy brand text */
+
+  /* Surfaces */
+  --surface-page:    var(--white);
+  --surface-card:    var(--white);
+  --surface-sunken:  var(--ink-50);
+  --surface-tint:    var(--tint-blue);
+  --surface-inverse: var(--navy-900);
+
+  /* Borders */
+  --border-default: var(--ink-200);
+  --border-strong:  var(--ink-300);
+  --border-subtle:  var(--ink-100);
+  --border-focus:   var(--blue-500);
+
+  /* Accent */
+  --accent:        var(--blue-600);
+  --accent-hover:  var(--blue-700);
+  --accent-soft:   var(--blue-50);
+  --accent-green:  var(--green-500);
+
+  /* Focus ring */
+  --focus-ring: rgba(37, 99, 235, 0.22);
+}

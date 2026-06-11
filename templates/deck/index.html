@@ -1,0 +1,221 @@
+<!-- @template name="Debt Resolve Pro Deck" description="Branded 16:9 slide deck — title, section, content, stats, services, process, quote, contact" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Debt Resolve Pro — Deck</title>
+<link rel="icon" href="../../assets/logo-drp.png">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="./ds-base.js"></script>
+<style>
+  deck-stage:not(:defined) { visibility: hidden; }
+  body { margin: 0; background: #0b1330; }
+
+  .slide { width: 1920px; height: 1080px; box-sizing: border-box; font-family: var(--font-sans);
+    color: var(--ink-700); background: var(--white); padding: 110px 130px; display: flex; flex-direction: column; position: relative; overflow: hidden; }
+  .eyebrow { font-size: 24px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--blue-600);
+    display: inline-flex; align-items: center; gap: 16px; }
+  .eyebrow::before { content: ''; width: 40px; height: 5px; border-radius: 999px; background: var(--gradient-arc); }
+  h1.title { font-family: var(--font-display); font-weight: 800; font-size: 104px; line-height: 1.03; letter-spacing: -0.02em; color: var(--ink-900); margin: 0; align-self: flex-start; }
+  h2.head { font-family: var(--font-display); font-weight: 800; font-size: 72px; line-height: 1.06; letter-spacing: -0.02em; color: var(--ink-900); margin: 26px 0 0; }
+  .lead { font-size: 34px; line-height: 1.5; color: var(--ink-600); max-width: 1180px; }
+  .blue { color: var(--blue-500); }
+  .green { color: var(--green-500); }
+  .foot { position: absolute; left: 130px; right: 130px; bottom: 64px; display: flex; align-items: center; justify-content: space-between;
+    font-size: 22px; color: var(--ink-400); }
+  .foot img { height: 40px; }
+  .logo-w { height: 64px; width: auto; align-self: flex-start; }
+
+  /* dark slides */
+  .slide.dark { background: var(--navy-900); color: rgba(255,255,255,0.8); }
+  .slide.dark h1.title, .slide.dark h2.head { color: #fff; }
+  .slide.dark .lead { color: rgba(255,255,255,0.8); }
+  .glow { position: absolute; width: 900px; height: 900px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(59,130,246,0.28), transparent 62%); top: -300px; right: -200px; pointer-events: none; }
+  .glow.green { background: radial-gradient(circle, rgba(98,178,47,0.26), transparent 62%); top: auto; bottom: -340px; right: auto; left: -260px; }
+
+  .spacer { flex: 1; }
+  .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 64px; margin-top: 72px; }
+  .stat .n { font-family: var(--font-display); font-weight: 800; font-size: 116px; line-height: 1; letter-spacing: -0.03em; color: var(--blue-500); }
+  .stat .n.g { color: var(--green-500); }
+  .stat .l { font-size: 28px; color: var(--ink-500); margin-top: 14px; max-width: 460px; }
+  .slide.dark .stat .l { color: rgba(255,255,255,0.7); }
+
+  .cols3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 72px; }
+  .scard { background: var(--white); border: 1px solid var(--border-default); border-radius: 24px; padding: 48px 42px; box-shadow: var(--shadow-card); }
+  .scard .tile { width: 92px; height: 92px; border-radius: 22px; background: var(--blue-600); color: #fff; display: flex; align-items: center; justify-content: center; margin-bottom: 30px; }
+  .scard .tile.green { background: var(--green-500); }
+  .scard h3 { font-family: var(--font-display); font-weight: 700; font-size: 38px; color: var(--ink-900); margin: 0 0 16px; }
+  .scard p { font-size: 25px; line-height: 1.5; color: var(--ink-600); margin: 0; }
+
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 44px; margin-top: 80px; }
+  .step .num { width: 96px; height: 96px; border-radius: 999px; background: var(--gradient-blue); color: #fff;
+    font-family: var(--font-display); font-weight: 800; font-size: 44px; display: flex; align-items: center; justify-content: center; margin-bottom: 30px; }
+  .step h3 { font-family: var(--font-display); font-weight: 700; font-size: 34px; color: var(--ink-900); margin: 0 0 14px; }
+  .step p { font-size: 23px; line-height: 1.5; color: var(--ink-600); margin: 0; }
+
+  .quote { font-family: var(--font-display); font-weight: 700; font-size: 68px; line-height: 1.22; letter-spacing: -0.015em; color: #fff; max-width: 1500px; }
+  .quote .mark { color: var(--green-500); }
+  .author { font-size: 30px; color: rgba(255,255,255,0.7); margin-top: 48px; display: flex; align-items: center; gap: 16px; }
+  .stars { color: #F5A623; font-size: 34px; letter-spacing: 4px; }
+
+  .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: center; flex: 1; }
+  .bullets { list-style: none; padding: 0; margin: 40px 0 0; }
+  .bullets li { display: flex; gap: 20px; align-items: flex-start; font-size: 30px; color: var(--ink-700); margin-bottom: 28px; line-height: 1.45; }
+  .bullets .ck { width: 40px; height: 40px; border-radius: 999px; background: var(--green-50); color: var(--green-600); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 3px; }
+  .media { width: 100%; height: 740px; border-radius: 28px; background: linear-gradient(135deg, var(--tint-blue), var(--blue-50));
+    border: 2px dashed var(--blue-100); display: flex; align-items: center; justify-content: center; color: var(--blue-500); font-size: 26px; font-weight: 700; }
+
+  .cta-actions { display: flex; gap: 28px; margin-top: 56px; }
+  .btn { display: inline-flex; align-items: center; gap: 16px; font-family: var(--font-display); font-weight: 600; font-size: 32px; border-radius: 16px; padding: 26px 44px; }
+  .btn.primary { background: var(--green-500); color: #fff; }
+  .btn.ghostw { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.45); }
+</style>
+</head>
+<body>
+<deck-stage width="1920" height="1080">
+
+  <!-- 1 · Title -->
+  <section data-label="Title">
+    <div class="slide dark">
+      <div class="glow"></div>
+      <div class="glow green"></div>
+      <img class="logo-w" src="../../assets/logo-drp-white.png" alt="Debt Resolve Pro" />
+      <div class="spacer"></div>
+      <div class="eyebrow" style="color: var(--blue-500);">The Pro in MCA Debt Settlement</div>
+      <h1 class="title" style="margin-top:28px;">Secure Your<br>Business's <span class="blue">Future</span></h1>
+      <p class="lead" style="margin-top:34px;">Reduce your MCA debt and improve your cash flow with a partner who negotiates on your behalf.</p>
+      <div class="spacer"></div>
+      <div class="foot" style="color: rgba(255,255,255,0.6);">
+        <span>Business Debt Negotiation Experts</span>
+        <span>866-757-3339 · debtrespro.com</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 · Section -->
+  <section data-label="Section">
+    <div class="slide" style="background: var(--surface-tint);">
+      <div class="spacer"></div>
+      <div class="eyebrow">The Challenge</div>
+      <h2 class="head" style="font-size:88px;">Merchant Cash Advances<br>can trap a healthy business.</h2>
+      <p class="lead" style="margin-top:34px;">High factor rates and daily withdrawals drain cash flow. We help owners regain control.</p>
+      <div class="spacer"></div>
+      <div class="foot"><img src="../../assets/logo-drp.png" alt="" /><span>01</span></div>
+    </div>
+  </section>
+
+  <!-- 3 · Content + media -->
+  <section data-label="Approach">
+    <div class="slide">
+      <div class="eyebrow">Our Approach</div>
+      <div class="content-grid">
+        <div>
+          <h2 class="head" style="font-size:64px; margin-top:18px;">A tailored strategy for your debt</h2>
+          <ul class="bullets">
+            <li><span class="ck">✓</span> Deep expertise in MCA agreements and funding structures</li>
+            <li><span class="ck">✓</span> Personalized plans — never cookie-cutter</li>
+            <li><span class="ck">✓</span> Clear communication and transparency throughout</li>
+            <li><span class="ck">✓</span> Direct negotiation to lower balances and payments</li>
+          </ul>
+        </div>
+        <div class="media">Photo — advisor &amp; business owner</div>
+      </div>
+      <div class="foot"><img src="../../assets/logo-drp.png" alt="" /><span>02</span></div>
+    </div>
+  </section>
+
+  <!-- 4 · Stats -->
+  <section data-label="Impact">
+    <div class="slide dark">
+      <div class="glow"></div>
+      <div class="eyebrow" style="color: var(--blue-500);">Our Impact</div>
+      <h2 class="head">Results that protect cash flow</h2>
+      <div class="stat-row">
+        <div class="stat"><div class="n">$40M+</div><div class="l">in business debt restructured</div></div>
+        <div class="stat"><div class="n g">Up to 50%</div><div class="l">typical reduction in outstanding balances</div></div>
+        <div class="stat"><div class="n">1,200+</div><div class="l">owners helped to regain control</div></div>
+      </div>
+      <div class="spacer"></div>
+      <div class="foot" style="color: rgba(255,255,255,0.6);"><img src="../../assets/logo-drp-white.png" style="height:40px" alt="" /><span>03</span></div>
+    </div>
+  </section>
+
+  <!-- 5 · Services -->
+  <section data-label="Services">
+    <div class="slide">
+      <div class="eyebrow">Our Services</div>
+      <h2 class="head" style="font-size:64px;">How we help you resolve debt</h2>
+      <div class="cols3">
+        <div class="scard">
+          <div class="tile"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg></div>
+          <h3>Debt Negotiation</h3>
+          <p>We negotiate directly with creditors to reduce balances and secure better terms.</p>
+        </div>
+        <div class="scard">
+          <div class="tile green"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg></div>
+          <h3>Debt Settlement</h3>
+          <p>We arrange to pay less than the full amount owed — a faster path to debt-free.</p>
+        </div>
+        <div class="scard">
+          <div class="tile"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Litigation Support</h3>
+          <p>If legal action arises, we coordinate with legal professionals to protect your business.</p>
+        </div>
+      </div>
+      <div class="foot"><img src="../../assets/logo-drp.png" alt="" /><span>04</span></div>
+    </div>
+  </section>
+
+  <!-- 6 · Process -->
+  <section data-label="Process">
+    <div class="slide" style="background: var(--surface-tint);">
+      <div class="eyebrow">Our Process</div>
+      <h2 class="head" style="font-size:64px;">How it works</h2>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><h3>Free Consultation</h3><p>A confidential discussion of your situation and MCA debt.</p></div>
+        <div class="step"><div class="num">2</div><h3>Analysis</h3><p>We analyze your agreements and build a tailored strategy.</p></div>
+        <div class="step"><div class="num">3</div><h3>Negotiation</h3><p>We engage your providers for the best possible terms.</p></div>
+        <div class="step"><div class="num">4</div><h3>Recovery</h3><p>We guide you to settlement and financial stability.</p></div>
+      </div>
+      <div class="spacer"></div>
+      <div class="foot"><img src="../../assets/logo-drp.png" alt="" /><span>05</span></div>
+    </div>
+  </section>
+
+  <!-- 7 · Quote -->
+  <section data-label="Testimonial">
+    <div class="slide dark">
+      <div class="glow green"></div>
+      <div class="stars">★★★★★</div>
+      <div class="spacer"></div>
+      <p class="quote"><span class="mark">&ldquo;</span>The team at DebtResolvePro is truly amazing — professional, kind, and genuinely committed to helping during a stressful time.<span class="mark">&rdquo;</span></p>
+      <div class="author">— Kelly P. · Business Owner</div>
+      <div class="spacer"></div>
+      <div class="foot" style="color: rgba(255,255,255,0.6);"><img src="../../assets/logo-drp-white.png" style="height:40px" alt="" /><span>06</span></div>
+    </div>
+  </section>
+
+  <!-- 8 · CTA -->
+  <section data-label="Contact">
+    <div class="slide dark">
+      <div class="glow"></div>
+      <div class="spacer"></div>
+      <div class="eyebrow" style="color: var(--blue-500);">Get Started</div>
+      <h2 class="head">Take the first step today.</h2>
+      <p class="lead" style="margin-top:30px;">A free, no-obligation consultation. Our team is standing by to help you secure your business's future.</p>
+      <div class="cta-actions">
+        <span class="btn primary">Free Assessment →</span>
+        <span class="btn ghostw">Call 866-757-3339</span>
+      </div>
+      <div class="spacer"></div>
+      <div class="foot" style="color: rgba(255,255,255,0.6);"><img src="../../assets/logo-drp-white.png" style="height:40px" alt="" /><span>debtrespro.com</span></div>
+    </div>
+  </section>
+
+</deck-stage>
+<script src="./deck-stage.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!-- @dsCard group="Spacing" viewport="700x150" name="Radii & Shadows" subtitle="Rounded corners + soft cool shadows" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--ink-50); padding: 24px; display: flex; gap: 32px; }
+  .group { display: flex; gap: 14px; align-items: flex-end; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .rbox { width: 54px; height: 54px; background: var(--white); border: 1px solid var(--border-strong); }
+  .sbox { width: 80px; height: 54px; background: var(--white); border-radius: var(--radius-lg); }
+  .n { font-size: 10px; font-weight: 700; font-family: var(--font-display); color: var(--ink-700); }
+  .px { font-size: 9px; font-family: var(--font-mono); color: var(--ink-400); }
+</style>
+</head>
+<body>
+  <div class="group">
+    <div class="item"><div class="rbox" style="border-radius: var(--radius-sm);"></div><div class="n">sm</div><div class="px">6</div></div>
+    <div class="item"><div class="rbox" style="border-radius: var(--radius-md);"></div><div class="n">md</div><div class="px">8</div></div>
+    <div class="item"><div class="rbox" style="border-radius: var(--radius-lg);"></div><div class="n">lg</div><div class="px">12</div></div>
+    <div class="item"><div class="rbox" style="border-radius: var(--radius-xl);"></div><div class="n">xl</div><div class="px">16</div></div>
+    <div class="item"><div class="rbox" style="border-radius: var(--radius-2xl);"></div><div class="n">2xl</div><div class="px">24</div></div>
+  </div>
+  <div class="group">
+    <div class="item"><div class="sbox" style="box-shadow: var(--shadow-sm);"></div><div class="n">sm</div></div>
+    <div class="item"><div class="sbox" style="box-shadow: var(--shadow-card);"></div><div class="n">card</div></div>
+    <div class="item"><div class="sbox" style="box-shadow: var(--shadow-lg); transform: translateY(-2px);"></div><div class="n">lg</div></div>
+    <div class="item"><div class="sbox" style="box-shadow: var(--shadow-btn); background: var(--blue-600);"></div><div class="n">btn</div></div>
+  </div>
+</body>
+</html>
