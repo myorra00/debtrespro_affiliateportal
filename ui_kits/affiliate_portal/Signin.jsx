@@ -31,7 +31,7 @@ function Signin() {
           <p className="subtle">Welcome back. Sign in to access your affiliate dashboard.</p>
 
           <div className="signin-row">
-            <Input label="Email" type="email" icon={Ic.mail({ size: 16 })} placeholder="you@yourcompany.com" defaultValue="paul.weston@yorkcap.com" />
+            <Input label="Email" type="email" icon={Ic.mail({ size: 16 })} placeholder="you@yourcompany.com" defaultValue="joe.weston@yorkcap.com" />
             <Input label="Password" type="password" icon={Ic.lock({ size: 16 })} placeholder="\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022" defaultValue="demo-password" />
 
             <div className="signin-options" style={{ justifyContent: 'flex-end' }}>

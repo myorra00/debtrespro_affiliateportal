@@ -14,7 +14,7 @@ function Onboarding() {
     { key: 'banking', label: 'Banking Information', short: 'Banking' },
   ];
 
-  const USER = { name: 'Paul Weston', initials: 'PW', company: 'New York Capital' };
+  const USER = { name: 'Joe Weston', initials: 'JW', company: 'New York Capital' };
 
   const [stepKey, setStepKey] = useState('welcome');
   const [done, setDone] = useState({});
@@ -181,7 +181,7 @@ function Onboarding() {
       <div className="form-section" style={{ padding: 0, background: 'none', border: 'none' }}>
         <h3>Taxpayer details</h3>
         <div className="form-grid">
-          <Input label="Legal name (as shown on tax return)" placeholder="Paul Weston" defaultValue={USER.name} />
+          <Input label="Legal name (as shown on tax return)" placeholder="Joe Weston" defaultValue={USER.name} />
           <Input label="Business / entity name (if different)" placeholder={USER.company} defaultValue={USER.company} />
           <Select label="Federal tax classification">
             <option>LLC — single-member (disregarded)</option>

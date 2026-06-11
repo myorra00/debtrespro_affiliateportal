@@ -4,7 +4,7 @@ const { useState, useMemo } = React;
 
 /* ---- Mock data ---- */
 const AFFILIATE = {
-  agent: { name: 'Paul Weston', initials: 'PW', role: 'Senior Partner', id: 'AGT-2204', email: 'paul.weston@newyorkcap.com', phone: '(212) 555-0184' },
+  agent: { name: 'Joe Weston', initials: 'JW', role: 'Senior Partner', id: 'AGT-2204', email: 'joe.weston@newyorkcap.com', phone: '(212) 555-0184' },
   company: { name: 'New York Capital', id: 'AFF-118', tier: 'Sales Partner', joined: 'Apr 2024', payoutTerms: 'Weekly', commissionRate: '15%' },
 };
 
@@ -29,7 +29,7 @@ const CONTRACTS = [
 ];
 
 const USERS = [
-  { id: 'AGT-2204', name: 'Paul Weston',  initials: 'PW', role: 'Senior Partner',   email: 'paul.weston@newyorkcap.com',  status: 'Active',  lastActive: '2 min ago',  deals: 4, isMe: true },
+  { id: 'AGT-2204', name: 'Joe Weston', initials: 'JW', role: 'Senior Partner',   email: 'joe.weston@newyorkcap.com',  status: 'Active',  lastActive: '2 min ago',  deals: 4, isMe: true },
   { id: 'AGT-2205', name: 'Sarah Klein',  initials: 'SK', role: 'Account Manager',  email: 'sarah.klein@newyorkcap.com',  status: 'Active',  lastActive: '4 hrs ago',  deals: 6 },
   { id: 'AGT-2206', name: 'Marco Diaz',   initials: 'MD', role: 'Sales Associate',  email: 'marco.diaz@newyorkcap.com',   status: 'Pending', lastActive: 'Invite sent', deals: 0 },
   { id: 'AGT-2207', name: 'Emma Park',    initials: 'EP', role: 'Operations Lead',  email: 'emma.park@newyorkcap.com',    status: 'Active',  lastActive: 'Yesterday',  deals: 2 },
