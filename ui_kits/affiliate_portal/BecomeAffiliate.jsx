@@ -56,15 +56,15 @@ function BecomeAffiliate() {
               Why Partner with DebtResolvePro?
             </h3>
             <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 28px', display: 'flex', flexDirection: 'column', gap: 12, maxWidth: 720 }}>
-              <li style={{ fontSize: 17, lineHeight: 1.55, color: 'rgba(255,255,255,0.88)', paddingLeft: 18, position: 'relative' }}>
+              <li style={{ fontSize: 17, lineHeight: 1.55, color: '#fff', paddingLeft: 18, position: 'relative' }}>
                 <span style={{ position: 'absolute', left: 0, top: 9, width: 8, height: 8, borderRadius: '50%', background: 'var(--green-500)' }} />
                 <strong style={{ color: '#fff' }}>Frictionless Closing:</strong> No paper, no PDFs, and no administrative bottlenecks. Our digital application handles the heavy lifting so you can lock in deals instantly.
               </li>
-              <li style={{ fontSize: 17, lineHeight: 1.55, color: 'rgba(255,255,255,0.88)', paddingLeft: 18, position: 'relative' }}>
+              <li style={{ fontSize: 17, lineHeight: 1.55, color: '#fff', paddingLeft: 18, position: 'relative' }}>
                 <span style={{ position: 'absolute', left: 0, top: 9, width: 8, height: 8, borderRadius: '50%', background: 'var(--green-500)' }} />
                 <strong style={{ color: '#fff' }}>Premium Debt Servicing:</strong> Rest easy knowing your customers are backed by seasoned industry experts dedicated to maximizing restructuring and settlement outcomes.
               </li>
-              <li style={{ fontSize: 17, lineHeight: 1.55, color: 'rgba(255,255,255,0.88)', paddingLeft: 18, position: 'relative' }}>
+              <li style={{ fontSize: 17, lineHeight: 1.55, color: '#fff', paddingLeft: 18, position: 'relative' }}>
                 <span style={{ position: 'absolute', left: 0, top: 9, width: 8, height: 8, borderRadius: '50%', background: 'var(--green-500)' }} />
                 <strong style={{ color: '#fff' }}>Accelerated Cash Flow:</strong> Enjoy reliable, weekly commission payouts. You connect the client to the right solution; we service the file and pay you fast.
               </li>
