@@ -43,8 +43,34 @@ function BecomeAffiliate() {
           <div className="aff-hero-inner">
             <span className="eyebrow">DebtResolvePro Affiliate Program</span>
             <h1>Close Your MCA Deals.<br/>Get Paid <span className="green">Weekly</span>.</h1>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 28, fontWeight: 700, lineHeight: 1.2, margin: '0 0 18px', color: '#fff' }}>
+              Leverage the Power of DebtResPro
+            </h2>
             <p className="lede">
-              Bring your own business-owner leads and use our digital contract application to close MCA debt-relief deals in minutes. Once signed, we take the file — negotiation, settlement, recovery — and pay your commission out weekly. No paper. No PDFs. No waiting.
+              Plug into the ultimate monetization engine for your customers seeking high-quality debt restructuring services. With our streamlined digital contracting application, you can secure MCA debt-relief deals in minutes — eliminating the friction of traditional paperwork.
+            </p>
+            <p className="lede">
+              Once the contract is signed, our elite debt-servicing team takes complete ownership of the file, managing everything from rigorous negotiation to final settlement and recovery.
+            </p>
+            <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 20, fontWeight: 700, margin: '8px 0 14px', color: '#fff' }}>
+              Why Partner with DebtResPro?
+            </h3>
+            <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 28px', display: 'flex', flexDirection: 'column', gap: 12, maxWidth: 720 }}>
+              <li style={{ fontSize: 17, lineHeight: 1.55, color: 'rgba(255,255,255,0.88)', paddingLeft: 18, position: 'relative' }}>
+                <span style={{ position: 'absolute', left: 0, top: 9, width: 8, height: 8, borderRadius: '50%', background: 'var(--green-500)' }} />
+                <strong style={{ color: '#fff' }}>Frictionless Closing:</strong> No paper, no PDFs, and no administrative bottlenecks. Our digital application handles the heavy lifting so you can lock in deals instantly.
+              </li>
+              <li style={{ fontSize: 17, lineHeight: 1.55, color: 'rgba(255,255,255,0.88)', paddingLeft: 18, position: 'relative' }}>
+                <span style={{ position: 'absolute', left: 0, top: 9, width: 8, height: 8, borderRadius: '50%', background: 'var(--green-500)' }} />
+                <strong style={{ color: '#fff' }}>Premium Debt Servicing:</strong> Rest easy knowing your customers are backed by seasoned industry experts dedicated to maximizing restructuring and settlement outcomes.
+              </li>
+              <li style={{ fontSize: 17, lineHeight: 1.55, color: 'rgba(255,255,255,0.88)', paddingLeft: 18, position: 'relative' }}>
+                <span style={{ position: 'absolute', left: 0, top: 9, width: 8, height: 8, borderRadius: '50%', background: 'var(--green-500)' }} />
+                <strong style={{ color: '#fff' }}>Accelerated Cash Flow:</strong> Enjoy reliable, weekly commission payouts. You connect the client to the right solution; we service the file and pay you fast.
+              </li>
+            </ul>
+            <p className="lede">
+              Maximize the value of your portfolio with a partner built for speed, compliance, and scale.
             </p>
             <div className="row">
               <Button variant="green" size="lg" iconRight={Ic.arrowRight({ size: 18 })} onClick={() => window.location.href = 'apply.html'}>Apply to Join</Button>
