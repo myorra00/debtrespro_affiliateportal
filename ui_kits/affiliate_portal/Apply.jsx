@@ -94,7 +94,7 @@ function Apply() {
         <div className="apply-grid">
           <div className="apply-pitch">
             <span style={{ display: 'inline-block', fontSize: 12, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--blue-600)', marginBottom: 14 }}>Affiliate Application</span>
-            <h1>Become an <span className="blue">Affiliate</span> today</h1>
+            <h1>Become a <span className="blue">DebtResolvePro</span> Affiliate Today!</h1>
             <p className="lede">Tell us a bit about you and your business. We'll review your application and reach out within 24 hours to discuss the program and next steps.</p>
 
             <ul className="apply-checks">

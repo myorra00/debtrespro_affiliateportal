@@ -389,7 +389,7 @@
 .apply-wrap { background: linear-gradient(180deg, var(--surface-tint) 0%, #fff 100%); }
 .apply-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; align-items: start;
   padding: 80px 0 96px; }
-.apply-pitch h1 { font-family: var(--font-display); font-size: 48px; font-weight: 800; line-height: 1.06;
+.apply-pitch h1 { font-family: var(--font-display); font-size: 38px; font-weight: 800; line-height: 1.1;
   letter-spacing: -0.02em; color: var(--ink-900); margin: 0 0 18px; }
 .apply-pitch h1 .blue { color: var(--blue-500); }
 .apply-pitch .lede { font-size: 18px; line-height: 1.6; color: var(--ink-600); margin: 0 0 28px; max-width: 520px; }
