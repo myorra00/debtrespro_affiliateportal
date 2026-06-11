@@ -51,7 +51,7 @@ function Signin() {
           </Button>
 
           <div className="signin-foot">
-            Not a partner yet? <a href="become-affiliate.html">Apply to join</a>
+            Not a partner yet? <a href="apply.html">Apply to join</a>
           </div>
         </div>
       </div>
