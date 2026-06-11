@@ -39,7 +39,6 @@ function Onboarding() {
       <div className="ob-header-inner">
         <a href="homepage.html" className="ob-brand">
           <img src="../../assets/logo-drp.png" alt="Debt Resolve Pro" />
-          <span>Debt Resolve Pro Affiliate Portal</span>
         </a>
         <div className="ob-header-right">
           <div className="ob-user">
