@@ -851,7 +851,6 @@ function Portal() {
           {navItem('dashboard', Ic.grid, 'Dashboard')}
           {navItem('leads', Ic.list, 'Leads', activeLeads)}
           {navItem('contracts', Ic.fileSigned, 'Contracts', pendingContracts, ['submit'])}
-          {navItem('sold', Ic.handshake, 'Sold Clients')}
           {navItem('users', Ic.users, 'Users', USERS.length)}
         </div>
         <div className="sb-section" style={{ marginTop: 14 }}>
