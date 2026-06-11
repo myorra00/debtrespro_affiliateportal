@@ -129,7 +129,6 @@ function Portal() {
             <p>{AFFILIATE.company.tier} · {AFFILIATE.company.commissionRate} commission · {AFFILIATE.company.payoutTerms} payouts · Affiliate since {AFFILIATE.company.joined}</p>
           </div>
           <div className="page-head-actions">
-            <Button variant="outline" iconLeft={Ic.download({ size: 16 })}>Export</Button>
             <Button variant="primary" iconLeft={Ic.fileSigned({ size: 16 })} onClick={() => setPage('submit')}>Create Contract</Button>
           </div>
         </div>
@@ -370,7 +369,6 @@ function Portal() {
             <p>Every referral you've submitted, with live status. Click any row for full detail.</p>
           </div>
           <div className="page-head-actions">
-            <Button variant="outline" iconLeft={Ic.download({ size: 16 })}>Export CSV</Button>
             <Button variant="primary" iconLeft={Ic.fileSigned({ size: 16 })} onClick={() => setPage('submit')}>Create Contract</Button>
           </div>
         </div>
@@ -498,7 +496,6 @@ function Portal() {
             <p>Converted clients attributed to {AFFILIATE.company.name}. Attribution travels with the record from Lead to Contact.</p>
           </div>
           <div className="page-head-actions">
-            <Button variant="outline" iconLeft={Ic.download({ size: 16 })}>Export</Button>
           </div>
         </div>
 
@@ -631,8 +628,7 @@ function Portal() {
             <p>Invite and manage the team at {AFFILIATE.company.name}. Each user gets their own portal login and their own commission attribution.</p>
           </div>
           <div className="page-head-actions">
-            <Button variant="outline" iconLeft={Ic.download({ size: 16 })}>Export</Button>
-            <Button variant="primary" iconLeft={Ic.plus({ size: 16 })}>Invite User</Button>
+            <Button variant="primary" iconLeft={Ic.plus({ size: 16 })}>Add Users</Button>
           </div>
         </div>
 
