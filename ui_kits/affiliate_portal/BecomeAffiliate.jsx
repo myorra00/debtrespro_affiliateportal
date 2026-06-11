@@ -119,8 +119,6 @@ function BecomeAffiliate() {
       <section className="section" id="apply" style={{ paddingTop: 64 }}>
         <div className="container">
           <div className="aff-final-cta">
-            <h2>Ready to Close Your First Deal?</h2>
-            <p>Apply once. Onboarded in 48 hours. Then bring your leads, close deals digitally, and watch weekly commissions hit your account.</p>
             <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
               <Button variant="green" size="lg" iconRight={Ic.arrowRight({ size: 18 })} onClick={() => window.location.href = 'apply.html'}>Apply to Join</Button>
             </div>
