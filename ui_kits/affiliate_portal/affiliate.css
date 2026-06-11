@@ -578,3 +578,108 @@
   .ob-header-right { gap: 14px; }
   .ob-help { display: none; }
 }
+
+/* ===========================================================
+   8. Hamburger drawer + mobile responsive pass
+   =========================================================== */
+.menu-btn { display: none; width: 40px; height: 40px; border-radius: var(--radius-md); border: none;
+  background: transparent; color: var(--ink-700); align-items: center; justify-content: center;
+  cursor: pointer; padding: 0; margin-right: 6px; }
+.menu-btn:hover { background: var(--ink-100); }
+.sidebar-backdrop { display: none; }
+
+@media (max-width: 768px) {
+  /* ---- Portal app shell: sidebar becomes off-canvas drawer ---- */
+  .sidebar { transform: translateX(-100%); transition: transform 0.22s ease;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2); width: 260px; z-index: 30; }
+  .app.nav-open .sidebar { transform: translateX(0); }
+  .sidebar-backdrop { display: block; position: fixed; inset: 0; background: rgba(0,0,0,0.4);
+    z-index: 25; opacity: 0; pointer-events: none; transition: opacity 0.18s; }
+  .app.nav-open .sidebar-backdrop { opacity: 1; pointer-events: auto; }
+  .main { margin-left: 0; }
+  .menu-btn { display: inline-flex; }
+  .topbar { padding: 0 14px; height: 56px; }
+  .topbar-title { font-size: 14px; }
+  .topbar-right { gap: 6px; }
+  .content { padding: 20px 16px; max-width: 100%; }
+  .kpi-grid { grid-template-columns: 1fr !important; }
+  .page-head { flex-direction: column; align-items: stretch; gap: 14px; }
+  .page-head h1 { font-size: 22px; }
+  .page-head p { font-size: 14px; }
+  .page-head-actions { width: 100%; }
+  .page-head-actions button { width: 100%; }
+
+  /* ---- Tables: horizontal scroll ---- */
+  .tbl { display: block; overflow-x: auto; white-space: nowrap; }
+
+  /* ---- Marketing nav ---- */
+  .nav { padding: 0; }
+  .nav-inner { padding: 12px 16px; flex-wrap: wrap; gap: 12px; }
+  .nav-links { display: none; }
+  .nav-right { gap: 10px; }
+  .nav-phone { font-size: 13px; }
+
+  /* ---- Become an Affiliate hero ---- */
+  .aff-hero { padding: 48px 0 56px; }
+  .aff-hero h1 { font-size: 34px; line-height: 1.1; }
+  .aff-hero .lede { font-size: 16px; }
+
+  /* ---- Stats ---- */
+  .aff-stats { padding: 40px 0; }
+  .aff-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .aff-stat .v { font-size: 30px; }
+
+  /* ---- Sections ---- */
+  .section { padding: 56px 0; }
+  .container { padding: 0 16px; }
+
+  /* ---- Apply page ---- */
+  .apply-pitch h1 { font-size: 28px; }
+  .apply-pitch .lede { font-size: 16px; }
+  .apply-card { padding: 24px 18px; }
+
+  /* ---- Sign-in ---- */
+  .signin-form-side { padding: 36px 22px; }
+
+  /* ---- Thank-you ---- */
+  .thanks-card { padding: 32px 20px; }
+  .thanks-card h1 { font-size: 26px; }
+  .thanks-card .lede { font-size: 15px; }
+
+  /* ---- Footer ---- */
+  .footer { padding: 40px 0 28px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; padding-bottom: 28px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
+
+  /* ---- Onboarding ---- */
+  .ob-header-inner { padding: 14px 16px; }
+  .ob-progress { padding: 16px 16px 18px; }
+  .ob-main { padding: 24px 16px 40px; }
+  .ob-card { padding: 26px 18px; }
+  .ob-card h1 { font-size: 22px; }
+  .ob-lede { font-size: 14.5px; }
+  .ob-steps { grid-template-columns: repeat(5, 1fr); }
+  .ob-step-marker { width: 26px; height: 26px; font-size: 12px; }
+  .ob-step-line { top: 12px; }
+  .ob-step-label { display: none; }
+  .ob-step-current .ob-step-label { display: block; font-size: 11px; max-width: 100%;
+    position: absolute; left: 50%; bottom: -22px; transform: translateX(-50%); white-space: nowrap; }
+  .ob-progress { padding-bottom: 38px; }
+  .ob-bullets li { padding: 12px 14px; }
+  .ob-footer { flex-direction: column-reverse; gap: 10px; align-items: stretch; }
+  .ob-footer > div { width: 100%; display: flex; }
+  .ob-footer > div > button { flex: 1; }
+  .ob-footer > div:last-child { flex-direction: column-reverse; }
+  .ob-doc-body { max-height: 180px; }
+
+  /* ---- Generic ---- */
+  .row { flex-direction: column; align-items: stretch; }
+  .row > button { width: 100%; }
+}
+
+@media (max-width: 420px) {
+  .aff-hero h1 { font-size: 28px; }
+  .aff-stats-grid { grid-template-columns: 1fr; }
+  .apply-pitch h1 { font-size: 24px; }
+  .nav-phone { display: none; }
+}

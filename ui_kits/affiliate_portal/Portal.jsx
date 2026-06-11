@@ -69,6 +69,7 @@ function Portal() {
   const [page, setPage] = useState('dashboard');
   const [leadFilter, setLeadFilter] = useState('All');
   const [search, setSearch] = useState('');
+  const [navOpen, setNavOpen] = useState(false);
 
   const TITLES = {
     dashboard: 'Dashboard',
@@ -85,7 +86,7 @@ function Portal() {
   const navItem = (key, icon, label, count, aliases) => {
     const isActive = page === key || (aliases && aliases.includes(page));
     return (
-      <button className={'sb-item' + (isActive ? ' active' : '')} onClick={() => setPage(key)}>
+      <button className={'sb-item' + (isActive ? ' active' : '')} onClick={() => { setPage(key); setNavOpen(false); }}>
         <span className="sb-ico">{icon({ size: 19 })}</span>{label}
         {count != null && <span className="sb-count">{count}</span>}
       </button>
@@ -871,7 +872,8 @@ function Portal() {
   const activeLeads = LEADS.filter(l => !['Sold', 'Disqualified'].includes(l.status)).length;
 
   return (
-    <div className="app">
+    <div className={'app' + (navOpen ? ' nav-open' : '')}>
+      <div className="sidebar-backdrop" onClick={() => setNavOpen(false)} />
       <aside className="sidebar">
         <div className="sb-brand">
           <a href="homepage.html"><img className="sb-logo" src="../../assets/logo-drp.png" alt="Debt Resolve Pro" /></a>
@@ -905,6 +907,7 @@ function Portal() {
 
       <main className="main">
         <div className="topbar">
+          <button className="menu-btn" onClick={() => setNavOpen(o => !o)} aria-label="Toggle navigation">{navOpen ? Ic.x({ size: 22 }) : Ic.menu({ size: 22 })}</button>
           <div className="topbar-title">Debt Resolve Pro Affiliate Portal</div>
           <div className="topbar-right">
             <button className="icon-btn">{Ic.bell({ size: 19 })}<span className="dot"></span></button>
